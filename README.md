@@ -354,29 +354,6 @@ print(result)
 
 ---
 
-## Summary
-
-### Minimal Files Needed
-✅ Only the `transpolymer/` package folder  
-✅ Your data in `data/`  
-✅ Model checkpoints in `ckpt/`  
-✅ Training scripts: `Downstream.py`, `Pretrain.py`  
-✅ Package files: `setup.py`, `requirements.txt`  
-
-### Best Environment Setup
-**Use UV** (fastest):
-```bash
-uv venv /opt/envs/transpolymer --python 3.9
-source /opt/envs/transpolymer/bin/activate
-uv pip install -r requirements.txt
-uv pip install -e .
-```
-
-### For Finetuning
-Just activate env and run:
-```bash
-python Downstream.py
-```
 
 ### For MCP
 Just activate env and run:
@@ -385,5 +362,3 @@ python main.py --interactive
 ```
 
 ---
-
-**Everything stays in `TransPolymer_pretrained/` - no external dependencies needed!**
