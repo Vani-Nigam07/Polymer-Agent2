@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "transpolymer"
+version = "1.0.0"
+description = "TransPolymer: A Transformer-based language model for polymer property predictions"
+readme = "README.md"
+license = {text = "Apache License 2.0"}
+authors = [
+    {name = "Changwen Xu", email = ""},
+    {name = "Yuyang Wang", email = ""},
+    {name = "Amir Barati Farimani", email = ""},
+]
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=1.12.0",
+    "transformers>=4.20.1",
+    "PyYAML>=6.0",
+    "fairscale>=0.4.6",
+    "rdkit>=2022.3.4",
+    "scikit-learn>=0.24.2",
+    "pandas>=1.0.0",
+    "numpy>=1.19.0",
+    "joblib>=1.0.0",
+    "regex>=2022.0.0",
+]
+
+[project.optional-dependencies]
+visualization = [
+    "tensorboard>=2.9.1",
+    "seaborn>=0.11.2",
+    "matplotlib>=3.3.0",
+    "opentsne>=0.6.2",
+]
+dev = [
+    "pytest>=6.0",
+    "black>=22.0",
+    "flake8>=4.0",
+    "mypy>=0.950",
+]
+mcp = [
+    "mcp>=0.3.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ChangwenXu98/TransPolymer"
+Repository = "https://github.com/ChangwenXu98/TransPolymer.git"
+Documentation = "https://github.com/ChangwenXu98/TransPolymer"
+"Bug Tracker" = "https://github.com/ChangwenXu98/TransPolymer/issues"
+
+[project.scripts]
+transpolymer = "transpolymer.core.predict:main"
+transpolymer-predict = "main:main"
+
+[tool.setuptools]
+packages = ["transpolymer", "transpolymer.core", "transpolymer.utils"]
+
+[tool.setuptools.package-data]
+transpolymer = [
+    "configs/*.yaml",
+    "ckpt/*",
+    "data/*",
+]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = false

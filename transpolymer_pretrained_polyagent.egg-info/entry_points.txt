@@ -1,0 +1,3 @@
+[console_scripts]
+transpolymer = transpolymer.core.predict:main
+transpolymer-predict = main:main

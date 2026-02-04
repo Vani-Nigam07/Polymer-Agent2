@@ -1,0 +1,26 @@
+# Core dependencies
+torch>=1.12.0
+transformers>=4.20.1
+PyYAML>=6.0
+fairscale>=0.4.6
+rdkit>=2022.3.4
+scikit-learn>=0.24.2
+pandas>=1.0.0
+numpy>=1.19.0
+joblib>=1.0.0
+regex>=2022.0.0
+
+# Visualization (optional)
+# tensorboard>=2.9.1
+# seaborn>=0.11.2
+# matplotlib>=3.3.0
+# opentsne>=0.6.2
+
+# Development (optional)
+# pytest>=6.0
+# black>=22.0
+# flake8>=4.0
+# mypy>=0.950
+
+# MCP Integration (optional)
+# mcp>=0.3.0
