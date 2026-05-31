@@ -1,4 +1,6 @@
-# Setup Guide - Finetuning, MCP, and Custom Environments
+# [Prediction module for Polymer-Agent](https://github.com/BaratiLab/Polymer-Agent) 
+[DOI LINK](https://pubs.acs.org/doi/10.1021/acs.jcim.6c00343)
+## Finetuning model for polymer property prediction
 
 ## Part 1: Finetuning & MCP Setup
 
